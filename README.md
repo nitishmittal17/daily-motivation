@@ -1,4 +1,4 @@
-<p align="center"><img src="https://raw.githubusercontent.com/nitishmittal17/daily-motivation/master/src/images/logo.jpg" alt="logo" height="200px" width="200px"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/nitishmittal17/daily-motivation/master/src/images/logo.jpg" alt="logo" height="150px" width="150px"></p>
 <h1 align="center">Daily Motivation</h1>
 
 ## What is it?
