@@ -1,0 +1,35 @@
+{
+  "name": "daily-motivation",
+  "version": "0.0.1",
+  "description": "A Chrome extension to provide user with a motivational quote everytime a new tab is opened.",
+  "main": "none",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d vendor"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nitishmittal17/daily-motivation.git"
+  },
+  "keywords": [
+    "chrome",
+    "extension",
+    "daily",
+    "motivation",
+    "motivational",
+    "quotes",
+    "new",
+    "tab"
+  ],
+  "author": "Nitish Mittal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nitishmittal17/daily-motivation/issues"
+  },
+  "homepage": "https://github.com/nitishmittal17/daily-motivation#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2"
+  }
+}

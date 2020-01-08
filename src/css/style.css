@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:200,400');
+
+html, 
+body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  background: transparent;
+}
+
+#wrap {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.ball {
+  pointer-events: none;
+  position: absolute;
+  border-radius: 50%;
+  animation-fill-mode: both;
+  opacity: .5;
+  animation-name: implode;
+  animation-duration: 2s;
+}
+
+@keyframes implode {
+  100% {transition: visibility hidden}
+}
+
+.quote-block {
+  height: 100%;
+  align-items: center;
+  display: flex;
+  z-index: 1000;
+  color: inherit;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+.quote-block div {
+  margin: 0 auto;
+  width: auto;
+}
+
+.quote-block #quote {
+  font-weight: 400;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.quote-block #author {
+  font-weight: 200;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+footer {
+  font-size: 1rem;
+  position: fixed;
+  bottom: 0;
+  padding: 0 1rem;
+  font-weight: 200;
+  width: 100%;
+  display: flex;
+}
+
+footer p {
+  display: inline-block;
+  flex: 1;
+}
+
+footer .downloadExtension {
+  text-align: right;
+  flex: 1;
+  vertical-align: bottom;
+  padding-right: 2rem;
+  padding-top: 2rem;
+}
+
+footer img {
+  height: 57.31px;
+  width: 59px;
+  margin-right: -1.2rem;
+  margin-bottom: -.5rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 200;
+}
+
+footer a:hover {
+  opacity: 0.5;
+}
+
+canvas {
+  z-index: -1000;
+  position: absolute;
+  width: 100%; 
+  height: 100%;
+  top: 0; right: 0; bottom: 0; left: 0;
+}
+
+img.settings {
+  margin: 1rem;
+  opacity: 0.6;
+  position: absolute;
+  height: 35px;
+}
+
+img.settings:hover {
+  opacity: 1;
+}
+
+#settings {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #313131;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  transition: 0.5s;
+  padding-top: 50px;
+  opacity: 0.9;
+}
+
+#settings a:hover {
+  color: #f1f1f1;
+}
+
+#settings .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+img.close {
+  margin: 1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 30px;
+}
+
+img.close:hover {
+  opacity: 0.5;
+}
+
+.options {
+  text-align: center;
+  padding: 0 25px;
+  margin-bottom: 100px;
+}
+
+.options img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+  display: block;
+}
+
+div.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #5B5B5B;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.container {
+  position: relative;
+  width: 200px;
+  height: auto;
+}
+
+.container:hover .overlay {
+  opacity: 0.7;
+}
+
+.options-title {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #ffffff;
+  margin-top: 0;
+  min-width: 150px;
+}
+
+.tooltip {
+  width: 0px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px;
+  opacity: 0;
+  animation: boxSlideIn forwards;
+  animation-duration: 1s;
+  max-height: 45px;
+  animation-delay: 1s;
+  font-size: 15px;
+
+  /* Position the tooltip */
+  position: absolute;
+  left: 55px;
+  top: 15px;
+  z-index: 1;
+}
+
+/* Arrow next to the tooltip */
+.tooltip::after {
+  content: " ";
+  position: absolute;
+  top: 25%;
+  right: 100%; /* To the left of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+
+.tooltip-close {
+  height: 11px;
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  opacity: 0.8;
+}
+
+.tooltip-close:hover {
+  opacity: 1;
+}
+
+@keyframes boxSlideIn {
+  100% {
+    opacity: 0.5;
+    width: 120px;
+  }
+}
